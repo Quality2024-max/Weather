@@ -1,0 +1,223 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #fff;
+
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  transition: background 0.5s ease;
+  padding: 20px;
+}
+
+/* MAIN CARD */
+.container {
+  width: 100%;
+  max-width: 380px; /* 🔥 responsive fix */
+  padding: 26px;
+
+  border-radius: 20px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+
+  animation: fadeIn 0.7s ease;
+}
+
+/* TITLE */
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* SEARCH */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  font-size: 14px;
+}
+
+.search-box button {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+
+  background: #ff9800;
+  color: #fff;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+/* IMAGE BOX */
+#cityImage {
+  width: 100%;
+  height: 200px; /* 🔥 FIX (important) */
+  background: url(jagannath-temple-kanpur-uttar-pradesh-1-attr-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 15px 0;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+#cityImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+#cityImage img:hover {
+  transform: scale(1.05);
+}
+
+/* ICON */
+#icon img {
+  width: 70px;
+  margin-top: 5px;
+}
+
+/* TEXT */
+#cityName {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#condition {
+  font-size: 18px;
+  margin-top: 6px;
+  opacity: 0.95;
+}
+
+#humidity {
+  font-size: 15px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* BACKGROUND THEMES */
+.sunny {
+  background: linear-gradient(to right, #fceabb, #f8b500);
+}
+
+.clouds {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.rain {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+}
+
+.snow {
+  background: linear-gradient(to right, #e6dada, #274046);
+}
+
+.default {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  #cityImage {
+    height: 160px;
+  }
+
+  #icon img {
+    width: 60px;
+  }
+
+  #cityName {
+    font-size: 18px;
+  }
+
+  #condition {
+    font-size: 16px;
+  }
+
+  #humidity {
+    font-size: 14px;
+  }
+}
+
+/* 📟 TABLET */
+@media (max-width: 768px) {
+  .container {
+    max-width: 420px;
+  }
+
+  #cityImage {
+    height: 180px;
+  }
+}
