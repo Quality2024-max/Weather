@@ -86,8 +86,7 @@ h1 {
   color: #444444;
 }
 
-.weather-box p,
-#humidity {
+.weather-box p {
   padding: 5px 0px;
   font-weight: 700;
   font-family: cursive;
@@ -95,12 +94,13 @@ h1 {
 }
 
 /* IMAGE BOX */
-#cityImage {
+.weather-box #cityImage {
   width: 100%;
-  height: 200px !important; /* 🔥 FIX (important) */
-  background: url(jagannath-temple-kanpur-uttar-pradesh-1-attr-hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  background: url(jagannath-temple-kanpur-uttar-pradesh-1-attr-hero.jpg)
+    no-repeat;
+  height: auto !important; /* 🔥 FIX (important) */
+  background-size: contain;
   border-radius: 14px;
   overflow: hidden;
   margin: 15px 0;
