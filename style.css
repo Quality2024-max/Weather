@@ -89,14 +89,15 @@ h1 {
 .weather-box p {
   padding: 5px 0px;
   font-weight: 700;
-  font-family: cursive;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
   font-size: 1em;
 }
 
 /* IMAGE BOX */
 .weather-box #cityImage {
-  width: 100%;
+  width: auto;
   height: auto !important; /* 🔥 FIX (important) */
+  background-size: cover;
   border-radius: 14px;
   overflow: hidden;
   margin: 15px 0;
